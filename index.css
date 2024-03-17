@@ -1,0 +1,247 @@
+* {
+    font-family: "Space Grotesk", sans-serif;
+}
+body {
+    height: 100vh;
+}
+body {
+    margin: 0;
+}
+.body1 {
+    background-image: url('bg-main-desktop.png');
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    
+}
+.front {
+    background-image: url('bg-card-front.png');
+    height: 245px;
+    width: 447px;
+    background-color: #ffc0cb;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+.pic2 {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.back {
+    position: relative;
+}
+.cardcvc {
+    width: 50px;
+    position: absolute;
+    color: #ffffff;
+    top: 96px;
+    left: 360px;
+    z-index: 1;
+}
+.cbb {
+    display: flex;
+    flex-direction: column;
+}
+.error {
+    display: unset;
+    padding-left: 5px;
+    color: red;
+}
+.inputerr {
+    border-color: red;
+}
+.one {
+    display: none;
+}
+.num {
+    font-size: 2em;
+    margin: auto auto 20px auto;
+    
+}
+.info {
+    display: flex;
+    font-size: 0.9em;
+}
+.info .name {
+    text-transform: uppercase;
+}
+.exp {
+    margin-left: auto;
+}
+.back {
+    margin-left: 50px;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 1000px;
+    margin: auto;
+}
+.setit {
+    background-color: white;
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 374px;
+    max-width: 1366px;
+}
+.cname {
+    display: flex;
+    flex-direction: column;
+}
+.cname p {
+    margin: 0;
+    font-size: 0.7em;
+}
+.cname input {
+    outline-color: rgb(107, 1, 107);
+}
+input {
+    outline-width: 1px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(165, 161, 161);
+    margin-top: 5px;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    max-width: 390px;
+}
+::placeholder {
+    padding: 10px;
+}
+.number {
+    margin-top: 20px;
+}
+.tit, .ins {
+    display: flex;
+}
+.number .cvc {
+    margin-left: 100px;
+}
+.month, .year {
+    width: 80px;
+    margin-right: 15px;
+    padding-left: 18px;
+}
+.month::placeholder, .year::placeholder {
+    padding: 0;
+}
+.inputc {
+    max-width: 250px;
+    
+}
+button {
+    border: none;
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 40px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border-radius: 10px;
+    max-width: 390px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(278, 100%, 26%);
+}
+.successful {
+    text-align: center;
+}
+.successful p {
+    color: rgb(148, 142, 142);
+    margin-top: 0;
+}
+.successful h1 {
+    margin-bottom: 0;
+}
+.hide {
+    display: none;
+}
+.cardcontainer {
+    padding-top: 5vh;
+}
+@media (max-width: 910px) {
+    .body2 {
+        background-image: url('bg-main-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-size: 100% 35%; 
+    }
+    .body1 {
+        background-image: unset;
+    }
+    main {
+        flex-direction: column;
+        max-width: 350px;
+    }
+    .setit {
+        margin-top: 8em;
+        padding: 15px;
+        max-width: 350px;
+    }
+    .setwrap {
+
+        max-width: 320px;
+        margin: 3em auto 0 auto;
+    }
+    .cardcontainer {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .back {
+        margin: 0;
+        margin-left: 3em;
+        position: relative;
+    }
+    .back img {
+        width: 300px;
+        box-sizing: border-box;
+        height: 190px;
+        
+    }
+    .inputc {
+        max-width: 130px;
+    }
+    .cardcvc {
+        position: absolute;
+        top: 65px;
+        left:14.5em;
+
+    }
+    .front {
+        z-index: 1;
+        height: 190px;
+        position: absolute;
+        top: 8.8em;
+        right: 3em;
+        width: 300px;
+        box-sizing: border-box;
+    }
+    .num {
+        font-size: 1.3em;
+    }
+    
+}

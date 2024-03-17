@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;700&family=Inter:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card</title>
+</head>
+<body>
+<div class="body1">
+<div class="body2">
+    <main>
+    <div class="cardcontainer">
+        <div class="front">
+                <div class="img">
+                    <div class="pic"></div>
+                    <div class="pic2"></div>
+                </div>
+                <div class="num" id="cnumberp">
+                    0000 0000 0000 0000
+                </div>
+                <div class="info">
+                    <div class="name" id="nameadd">ADRIAN BALAKIN</div>
+                    <div class="exp"><span id="monthp">00</span>/<span id="yearp">00</span></span></div>
+                </div>
+        </div>
+        <div class="back">
+            <img src="C:\Users\user\Desktop\interactive-card\images\bg-card-back.png" alt="">
+            <p class="cardcvc" id="cvcp">000</p>
+        </div>
+    </div>
+
+    <div class="setit">
+        <div class="setwrap" id="setwrap">
+        <div class="cname">
+            <p>CARDHOLDER NAME</p>
+            <input type="text" placeholder="e.g. Adrian Balakin" id="nameinput">
+        </div>
+        <div class="cname number">
+            <p>CARD NUMBER</p>
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="cnumberi">
+            <p class="one error" id="cnerror">Wrong format, numbers only</p>
+        </div>
+
+        <div class="cname number">
+            <div class="tit">
+            <p>EXP. DATE (MM/YY)</p> <p class="cvc">CVC</p>
+            </div>
+            <div class="ins">
+            <div class="cbb">
+                <input type="number" placeholder="MM" class="month" id="monthi">
+                <p class="one error" id="ymerror">Can't be blank</p>
+            </div>
+                <input type="number" placeholder="YY" class="year" id="yeari">
+                
+            <div class="cbb">
+            <input type="text" placeholder="e.g. 123" class="inputc" id="cvci">
+            <p class="error one" id="cvcerror">Can't be blank</p>
+            </div>
+            </div>
+        </div>
+        <button>Confirms</button>
+        </div>
+
+        <div class="hide successful"id="successful">
+            <img class="sucesslogo" src="file:///C:/Users/user/Desktop/interactive-card/images/icon-complete.svg" alt="">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button>Continue</button>
+        </div>
+    </div>
+    
+</main>
+</div>
+</div>
+</body>
+<script src="page.js"></script>
+</html>
