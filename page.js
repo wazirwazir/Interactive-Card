@@ -30,23 +30,20 @@ function year() {
     if (yeari.value.length === 1) {
         yearp.innerHTML = "0" + yeari.value
     }
-    else if (yeari.value < 1) {
-        yeari.classList.add('inputerr')
-    }
 }
 
 yeari.addEventListener('input', year)
 
 function month() {
     
-    if (monthi.value.length < 1 || monthi.value > 12 || monthi.value < 0) {
+    /* if (monthi.value.length < 1) {
         ymerror.classList.remove('one')
         monthi.classList.add('inputerr')
-    } else {
+    } else { */
         monthp.innerHTML = monthi.value;
         monthi.classList.remove('inputerr')
         ymerror.classList.add('one')
-    }
+   /*  } */
     if (monthi.value.length === 1) {
         monthp.innerHTML = "0" + monthi.value
     }
@@ -55,7 +52,6 @@ function month() {
 monthi.addEventListener('input', month)
 
 function  CVC() {
-
     if (isNaN(cvci.value) || cvci.value.length !== 3) {
         cvci.classList.add('inputerr')
         cvcerror.classList.remove('one')
@@ -71,32 +67,17 @@ cvci.addEventListener('input', CVC)
 
 
 function cardNum() {
-   
-     if (cnumberi.value.length < 1 || cnumberi.value.length > 19) {
+    let value = cnumberi.value.replace(/\s+/g, '')
+    let formattedValue = value.match(/.{1,4}/g)?.join(' ') 
+    if (cnumberi.value.length < 1 || cnumberi.value.length > 19) {
         cnumberi.classList.add('inputerr');
         cnerror.classList.remove('one')
     } else {
-        cnumberp.innerHTML = cnumberi.value;
+        cnumberp.innerHTML = formattedValue;
         cnumberi.classList.remove('inputerr');
         cnerror.classList.add('one')
     }
-    //To be corrected later
-    /*
-    if (cnumberi.value[16]) {
-        cnumberp.innerHTML =  
-        cnumberi.value[1] +  cnumberi.value[2] +
-        cnumberi.value[3] + cnumberi.value[4] + ' ' +
-        cnumberi.value[5] + cnumberi.value[6] +
-        cnumberi.value[7] + cnumberi.value[8] + ' ' +
-        cnumberi.value[9] + cnumberi.value[10] +
-        cnumberi.value[11] + cnumberi.value[12] + ' ' +
-        cnumberi.value[13] + cnumberi.value[14] +
-        cnumberi.value[15] + cnumberi.value[16]
-    }
-    if (cnumberi.value > 4) {
-        let par = document.createElement(p)
-        cnumberp.appendChild(par)
-    }*/
+    
 }
 cnumberi.addEventListener('input', cardNum)
 
@@ -125,5 +106,3 @@ function submitted() {
 }
 button.onclick = submitted
 
-
- 
